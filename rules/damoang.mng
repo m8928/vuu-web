@@ -1,5 +1,5 @@
 {
-    "version": 10,
+    "version": 11,
     "updateUrl": "https://moang.blueat.me/rules/damoang.mng",
     "site": {
         "name": "다모앙",
@@ -159,7 +159,7 @@
             "category": "운영"
         },
         {
-            "name": "2.신청",
+            "name": "소모임 신청",
             "id": "newgroup",
             "uri": "/newgroup",
             "category": "소모임"
