@@ -1,5 +1,5 @@
 {
-    "version": 12,
+    "version": 13,
     "updateUrl": "https://moang.blueat.me/rules/damoang.mng",
     "site": {
         "name": "다모앙",
@@ -836,7 +836,7 @@
                         ]
                     },
                     "body": {
-                        "selector": "#bo_v_con .na-convert, #bo_v_data .text-truncate",
+                        "selector": "#bo_v_img, #bo_v_con .na-convert, #bo_v_data .text-truncate",
                         "type": "html",
                         "joinValues": true
                     }
