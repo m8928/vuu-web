@@ -1,11 +1,10 @@
 {
-    "version": 13,
+    "version": 14,
     "updateUrl": "https://moang.blueat.me/rules/damoang.mng",
     "site": {
         "name": "다모앙",
         "baseUrl": "https://damoang.net",
-        "pageParam": "page",
-        "loginCheckSelector": "a[href*='logout.php']"
+        "pageParam": "page"
     },
     "boards": [
         {
@@ -755,7 +754,7 @@
                             }
                         ]
                     },
-                    "view": {
+                    "views": {
                         "selector": ".wr-num.order-4",
                         "type": "int",
                         "normalization": [
@@ -772,12 +771,12 @@
                             }
                         ]
                     },
-                    "reply": {
+                    "commentCount": {
                         "selector": ".count-plus",
                         "type": "int",
                         "default": "0"
                     },
-                    "thumbUp": {
+                    "likes": {
                         "selector": ".rcmd-box",
                         "type": "int",
                         "default": "0"
@@ -973,7 +972,7 @@
                             }
                         ]
                     },
-                    "view": {
+                    "views": {
                         "selector": ".wr-num.order-4",
                         "type": "int",
                         "normalization": [
@@ -990,12 +989,12 @@
                             }
                         ]
                     },
-                    "reply": {
+                    "commentCount": {
                         "selector": ".count-plus",
                         "type": "int",
                         "default": "0"
                     },
-                    "thumbUp": {
+                    "likes": {
                         "selector": ".rcmd-box",
                         "type": "int",
                         "default": "0"
