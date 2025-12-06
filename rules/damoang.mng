@@ -1,712 +1,25 @@
 {
-    "version": 14,
+    "version": 15,
     "updateUrl": "https://moang.blueat.me/rules/damoang.mng",
     "site": {
         "name": "다모앙",
         "baseUrl": "https://damoang.net",
         "pageParam": "page"
     },
-    "boards": [
-        {
-            "name": "불타는앙",
-            "id": "fire",
-            "uri": "/fire",
-            "category": "커뮤"
-        },
-        {
-            "name": "자유게시판",
-            "id": "free",
-            "uri": "/free",
-            "category": "커뮤"
-        },
-        {
-            "name": "질문과 답변",
-            "id": "qa",
-            "uri": "/qa",
-            "category": "커뮤"
-        },
-        {
-            "name": "갤러리",
-            "id": "gallery",
-            "uri": "/gallery",
-            "category": "커뮤"
-        },
-        {
-            "name": "가입인사",
-            "id": "hello",
-            "uri": "/hello",
-            "category": "커뮤"
-        },
-        {
-            "name": "나눔",
-            "id": "giving",
-            "uri": "/giving",
-            "category": "커뮤"
-        },
-        {
-            "name": "중고장터",
-            "id": "trade",
-            "uri": "/trade",
-            "category": "커뮤"
-        },
-        {
-            "name": "앙수호대",
-            "id": "ang_guard",
-            "uri": "/",
-            "category": "커뮤"
-        },
-        {
-            "name": "새로운 소식",
-            "id": "new",
-            "uri": "/new",
-            "category": "정보"
-        },
-        {
-            "name": "알뜰구매",
-            "id": "economy",
-            "uri": "/economy",
-            "category": "정보"
-        },
-        {
-            "name": "강좌/팁",
-            "id": "lecture",
-            "uri": "/lecture",
-            "category": "정보"
-        },
-        {
-            "name": "사용기",
-            "id": "tutorial",
-            "uri": "/tutorial",
-            "category": "정보"
-        },
-        {
-            "name": "자료실",
-            "id": "pds",
-            "uri": "/pds",
-            "category": "정보"
-        },
-        {
-            "name": "낙서/연습장",
-            "id": "laboratory",
-            "uri": "/laboratory",
-            "category": "정보"
-        },
-        {
-            "name": "직접홍보",
-            "id": "promotion",
-            "uri": "/promotion",
-            "category": "정보"
-        },
-        {
-            "name": "앙지도",
-            "id": "angmap",
-            "uri": "/angmap",
-            "category": "리뷰"
-        },
-        {
-            "name": "앙티티",
-            "id": "angtt",
-            "uri": "/angtt",
-            "category": "리뷰"
-        },
-        {
-            "name": "수익링크",
-            "id": "referral",
-            "uri": "/referral",
-            "category": "리뷰"
-        },
-        {
-            "name": "셀프구입",
-            "id": "self",
-            "uri": "/self",
-            "category": "리뷰"
-        },
-        {
-            "name": "공지사항",
-            "id": "notice",
-            "uri": "/notice",
-            "category": "운영"
-        },
-        {
-            "name": "앙리포트",
-            "id": "report",
-            "uri": "/report",
-            "category": "운영"
-        },
-        {
-            "name": "다모앙 통계부",
-            "id": "statistics",
-            "uri": "/bbs/tag.php?q=%EB%8B%A4%EB%AA%A8%EC%95%99%ED%86%B5%EA%B3%84%EB%B6%80",
-            "category": "운영"
-        },
-        {
-            "name": "신고 누적 게시물",
-            "id": "truthroom",
-            "uri": "/truthroom",
-            "category": "운영"
-        },
-        {
-            "name": "회원 이용제한 기록",
-            "id": "disciplinelog",
-            "uri": "/disciplinelog",
-            "category": "운영"
-        },
-        {
-            "name": "소명게시판",
-            "id": "claim",
-            "uri": "/claim",
-            "category": "운영"
-        },
-        {
-            "name": "소모임 신청",
-            "id": "newgroup",
-            "uri": "/newgroup",
-            "category": "소모임"
-        },
-        {
-            "name": "AI당",
-            "id": "ai",
-            "uri": "/ai",
-            "category": "소모임"
-        },
-        {
-            "name": "GIT당",
-            "id": "git",
-            "uri": "/git",
-            "category": "소모임"
-        },
-        {
-            "name": "LOL당",
-            "id": "lol",
-            "uri": "/lol",
-            "category": "소모임"
-        },
-        {
-            "name": "NBA",
-            "id": "nba",
-            "uri": "/nba",
-            "category": "소모임"
-        },
-        {
-            "name": "OTT당",
-            "id": "ott",
-            "uri": "/ott",
-            "category": "소모임"
-        },
-        {
-            "name": "VR당",
-            "id": "vr",
-            "uri": "/vr",
-            "category": "소모임"
-        },
-        {
-            "name": "Youtube당",
-            "id": "youtube",
-            "uri": "/youtube",
-            "category": "소모임"
-        },
-        {
-            "name": "가상화폐당",
-            "id": "cryptocurrency",
-            "uri": "/cryptocurrency",
-            "category": "소모임"
-        },
-        {
-            "name": "개발한당",
-            "id": "development",
-            "uri": "/development",
-            "category": "소모임"
-        },
-        {
-            "name": "게임한당",
-            "id": "game",
-            "uri": "/game",
-            "category": "소모임"
-        },
-        {
-            "name": "경로당",
-            "id": "seniorcenter",
-            "uri": "/seniorcenter",
-            "category": "소모임"
-        },
-        {
-            "name": "골프당",
-            "id": "golf",
-            "uri": "/golf",
-            "category": "소모임"
-        },
-        {
-            "name": "공부한당",
-            "id": "study",
-            "uri": "/study",
-            "category": "소모임"
-        },
-        {
-            "name": "굴러간당",
-            "id": "car",
-            "uri": "/car",
-            "category": "소모임"
-        },
-        {
-            "name": "그림그린당",
-            "id": "drawing",
-            "uri": "/drawing",
-            "category": "소모임"
-        },
-        {
-            "name": "글쓴당",
-            "id": "writing",
-            "uri": "/writing",
-            "category": "소모임"
-        },
-        {
-            "name": "나스당",
-            "id": "nas",
-            "uri": "/nas",
-            "category": "소모임"
-        },
-        {
-            "name": "낚시당",
-            "id": "fishing",
-            "uri": "/fishing",
-            "category": "소모임"
-        },
-        {
-            "name": "날아간당",
-            "id": "fly",
-            "uri": "/fly",
-            "category": "소모임"
-        },
-        {
-            "name": "냐옹이당",
-            "id": "cat",
-            "uri": "/cat",
-            "category": "소모임"
-        },
-        {
-            "name": "노젓는당",
-            "id": "paddle",
-            "uri": "/paddle",
-            "category": "소모임"
-        },
-        {
-            "name": "녹음한당",
-            "id": "recording",
-            "uri": "/recording",
-            "category": "소모임"
-        },
-        {
-            "name": "다바앙",
-            "id": "coffee",
-            "uri": "/coffee",
-            "category": "소모임"
-        },
-        {
-            "name": "달린당",
-            "id": "running",
-            "uri": "/running",
-            "category": "소모임"
-        },
-        {
-            "name": "대구당",
-            "id": "daegu",
-            "uri": "/daegu",
-            "category": "소모임"
-        },
-        {
-            "name": "동숲한당",
-            "id": "dongsup",
-            "uri": "/dongsup",
-            "category": "소모임"
-        },
-        {
-            "name": "드론당",
-            "id": "drone",
-            "uri": "/drone",
-            "category": "소모임"
-        },
-        {
-            "name": "듣는당",
-            "id": "listening",
-            "uri": "/listening",
-            "category": "소모임"
-        },
-        {
-            "name": "등산한당",
-            "id": "hike",
-            "uri": "/hike",
-            "category": "소모임"
-        },
-        {
-            "name": "디아블로당",
-            "id": "diablo",
-            "uri": "/diablo",
-            "category": "소모임"
-        },
-        {
-            "name": "땀흘린당",
-            "id": "gym",
-            "uri": "/gym",
-            "category": "소모임"
-        },
-        {
-            "name": "레고당",
-            "id": "lego",
-            "uri": "/lego",
-            "category": "소모임"
-        },
-        {
-            "name": "리눅서당",
-            "id": "linux",
-            "uri": "/linux",
-            "category": "소모임"
-        },
-        {
-            "name": "만화본당",
-            "id": "comic",
-            "uri": "/comic",
-            "category": "소모임"
-        },
-        {
-            "name": "맥모앙",
-            "id": "macmoang",
-            "uri": "/macmoang",
-            "category": "소모임"
-        },
-        {
-            "name": "밀리터리당",
-            "id": "military",
-            "uri": "/military",
-            "category": "소모임"
-        },
-        {
-            "name": "바다건너당",
-            "id": "overseas",
-            "uri": "/overseas",
-            "category": "소모임"
-        },
-        {
-            "name": "방탄소년당",
-            "id": "bts",
-            "uri": "/bts",
-            "category": "소모임"
-        },
-        {
-            "name": "보드게임당",
-            "id": "boardgame",
-            "uri": "/boardgame",
-            "category": "소모임"
-        },
-        {
-            "name": "보러간당",
-            "id": "see",
-            "uri": "/see",
-            "category": "소모임"
-        },
-        {
-            "name": "봉사앙",
-            "id": "volunteer",
-            "uri": "/volunteer",
-            "category": "소모임"
-        },
-        {
-            "name": "비어있당",
-            "id": "beer",
-            "uri": "/beer",
-            "category": "소모임"
-        },
-        {
-            "name": "빵친당",
-            "id": "bread",
-            "uri": "/bread",
-            "category": "소모임"
-        },
-        {
-            "name": "사장한당",
-            "id": "business",
-            "uri": "/business",
-            "category": "소모임"
-        },
-        {
-            "name": "서버당",
-            "id": "server",
-            "uri": "/server",
-            "category": "소모임"
-        },
-        {
-            "name": "서피스당",
-            "id": "MSSurface",
-            "uri": "/MSSurface",
-            "category": "소모임"
-        },
-        {
-            "name": "소셜게임한당",
-            "id": "socialgame",
-            "uri": "/socialgame",
-            "category": "소모임"
-        },
-        {
-            "name": "시계당",
-            "id": "watches",
-            "uri": "/watches",
-            "category": "소모임"
-        },
-        {
-            "name": "악기당",
-            "id": "instrument",
-            "uri": "/instrument",
-            "category": "소모임"
-        },
-        {
-            "name": "안드로메당",
-            "id": "android",
-            "uri": "/android",
-            "category": "소모임"
-        },
-        {
-            "name": "애플모앙",
-            "id": "applemoang",
-            "uri": "/applemoang",
-            "category": "소모임"
-        },
-        {
-            "name": "야구당",
-            "id": "baseball",
-            "uri": "/baseball",
-            "category": "소모임"
-        },
-        {
-            "name": "여행한당",
-            "id": "travel",
-            "uri": "/travel",
-            "category": "소모임"
-        },
-        {
-            "name": "영화본당",
-            "id": "movie",
-            "uri": "/movie",
-            "category": "소모임"
-        },
-        {
-            "name": "옵시디안당",
-            "id": "obsidang",
-            "uri": "/obsidang",
-            "category": "소모임"
-        },
-        {
-            "name": "와우한당",
-            "id": "wow",
-            "uri": "/wow",
-            "category": "소모임"
-        },
-        {
-            "name": "와인마신당",
-            "id": "wine",
-            "uri": "/wine",
-            "category": "소모임"
-        },
-        {
-            "name": "요리당",
-            "id": "cooking",
-            "uri": "/cooking",
-            "category": "소모임"
-        },
-        {
-            "name": "우주본당",
-            "id": "space",
-            "uri": "/space",
-            "category": "소모임"
-        },
-        {
-            "name": "위스키당",
-            "id": "whiskey",
-            "uri": "/whiskey",
-            "category": "소모임"
-        },
-        {
-            "name": "육아당",
-            "id": "parenting",
-            "uri": "/parenting",
-            "category": "소모임"
-        },
-        {
-            "name": "이륜차당",
-            "id": "mbike",
-            "uri": "/mbike",
-            "category": "소모임"
-        },
-        {
-            "name": "일본산당",
-            "id": "japanlive",
-            "uri": "/japanlive",
-            "category": "소모임"
-        },
-        {
-            "name": "자전거당",
-            "id": "bicycle",
-            "uri": "/bicycle",
-            "category": "소모임"
-        },
-        {
-            "name": "잠수한당",
-            "id": "scuba",
-            "uri": "/scuba",
-            "category": "소모임"
-        },
-        {
-            "name": "재봉한당",
-            "id": "sewing",
-            "uri": "/sewing",
-            "category": "소모임"
-        },
-        {
-            "name": "전자책이당",
-            "id": "ebook",
-            "uri": "/ebook",
-            "category": "소모임"
-        },
-        {
-            "name": "주식한당",
-            "id": "stock",
-            "uri": "/stock",
-            "category": "소모임"
-        },
-        {
-            "name": "지켜본당",
-            "id": "watchingyou",
-            "uri": "/watchingyou",
-            "category": "소모임"
-        },
-        {
-            "name": "집꾸민당",
-            "id": "interior",
-            "uri": "/interior",
-            "category": "소모임"
-        },
-        {
-            "name": "집짓는당",
-            "id": "homebuilding",
-            "uri": "/homebuilding",
-            "category": "소모임"
-        },
-        {
-            "name": "찰칵찍당",
-            "id": "photo",
-            "uri": "/photo",
-            "category": "소모임"
-        },
-        {
-            "name": "책읽는당",
-            "id": "readingbooks",
-            "uri": "/readingbooks",
-            "category": "소모임"
-        },
-        {
-            "name": "철도당",
-            "id": "train",
-            "uri": "/train",
-            "category": "소모임"
-        },
-        {
-            "name": "축구한당",
-            "id": "soccer",
-            "uri": "/soccer",
-            "category": "소모임"
-        },
-        {
-            "name": "칭차앙",
-            "id": "compliment",
-            "uri": "/compliment",
-            "category": "소모임"
-        },
-        {
-            "name": "캠핑간당",
-            "id": "camping",
-            "uri": "/camping",
-            "category": "소모임"
-        },
-        {
-            "name": "콘솔한당",
-            "id": "console",
-            "uri": "/console",
-            "category": "소모임"
-        },
-        {
-            "name": "키보드당",
-            "id": "keyboard",
-            "uri": "/keyboard",
-            "category": "소모임"
-        },
-        {
-            "name": "탁구당",
-            "id": "tabletennis",
-            "uri": "/tabletennis",
-            "category": "소모임"
-        },
-        {
-            "name": "패스오브엑자일당",
-            "id": "pathofexile",
-            "uri": "/pathofexile",
-            "category": "소모임"
-        },
-        {
-            "name": "포뮬러당",
-            "id": "formula",
-            "uri": "/formula",
-            "category": "소모임"
-        },
-        {
-            "name": "포토샵당",
-            "id": "photoshop",
-            "uri": "/photoshop",
-            "category": "소모임"
-        },
-        {
-            "name": "퐁당퐁당",
-            "id": "swim",
-            "uri": "/swim",
-            "category": "소모임"
-        },
-        {
-            "name": "푸르르당",
-            "id": "plant",
-            "uri": "/plant",
-            "category": "소모임"
-        },
-        {
-            "name": "플라스틱모델앙",
-            "id": "plasticmodel",
-            "uri": "/plasticmodel",
-            "category": "소모임"
-        },
-        {
-            "name": "플레이모빌당",
-            "id": "playmobil",
-            "uri": "/playmobil",
-            "category": "소모임"
-        },
-        {
-            "name": "필기도구당",
-            "id": "stationery",
-            "uri": "/stationery",
-            "category": "소모임"
-        },
-        {
-            "name": "하드웨어앙",
-            "id": "hardware",
-            "uri": "/hardware",
-            "category": "소모임"
-        }
-    ],
-    "rules": {
-        "default": {
+    "variables": {
+        "articleLink": ".da-article-link",
+        "author": ".sv_member",
+        "date": ".wr-date"
+    },
+    "templates": {
+        "defaultBoard": {
             "articles": {
                 "urlPattern": ".*\\/[a-zA-Z0-9]+(\\?.*)?$",
                 "repeatable": true,
                 "selector": "ul.list-group li.list-group-item:not(.d-none)",
                 "fields": {
                     "title": {
-                        "selector": ".da-article-link",
+                        "selector": "@articleLink",
                         "type": "string",
                         "normalization": [
                             {
@@ -715,12 +28,12 @@
                         ]
                     },
                     "link": {
-                        "selector": ".da-article-link",
+                        "selector": "@articleLink",
                         "attribute": "href",
                         "type": "string"
                     },
                     "id": {
-                        "selector": ".da-article-link",
+                        "selector": "@articleLink",
                         "attribute": "href",
                         "type": "int",
                         "normalization": [
@@ -732,7 +45,7 @@
                         ]
                     },
                     "author": {
-                        "selector": ".sv_member",
+                        "selector": "@author",
                         "type": "string",
                         "normalization": [
                             {
@@ -741,7 +54,7 @@
                         ]
                     },
                     "date": {
-                        "selector": ".wr-date",
+                        "selector": "@date",
                         "type": "string",
                         "normalization": [
                             {
@@ -796,11 +109,22 @@
                     }
                 }
             },
+            "nextPage": {
+                "repeatable": false,
+                "optional": true,
+                "selector": "li.page-item.active + li.page-item",
+                "attribute": "href",
+                "type": "string"
+            },
+            "currentPage": {
+                "repeatable": false,
+                "optional": true,
+                "selector": "li.page-item.active",
+                "type": "int"
+            },
             "content": {
                 "urlPattern": ".*\\/[a-zA-Z0-9]+\\/\\d+.*",
                 "repeatable": false,
-                "optional": true,
-                "selector": "#bo_v",
                 "fields": {
                     "title": {
                         "selector": "#bo_v_title",
@@ -842,7 +166,6 @@
                 }
             },
             "comments": {
-                "urlPattern": ".*\\/[a-zA-Z0-9]+\\/\\d+.*",
                 "repeatable": true,
                 "selector": "#bo_vc article",
                 "fields": {
@@ -885,135 +208,818 @@
                         ]
                     }
                 }
-            },
-            "nextPage": {
-                "repeatable": false,
-                "optional": true,
-                "selector": "li.page-item.active + li.page-item",
-                "attribute": "href",
-                "type": "string"
-            },
-            "currentPage": {
-                "repeatable": false,
-                "optional": true,
-                "selector": "li.page-item.active",
-                "type": "int"
             }
+        }
+    },
+    "boards": [
+        {
+            "name": "불타는앙",
+            "id": "fire",
+            "uri": "/fire",
+            "category": "커뮤",
+            "template": "defaultBoard"
         },
-        "new": {
-            "articles": {
-                "urlPattern": ".*\\/[a-zA-Z0-9]+(\\?.*)?$",
-                "repeatable": true,
-                "selector": "ul.list-group li.list-group-item:not(.d-none)",
-                "fields": {
-                    "category": {
-                        "selector": ".badge.text-body-tertiary",
-                        "type": "string",
-                        "normalization": [
-                            {
-                                "type": "trim"
-                            },
-                            {
-                                "type": "regexReplace",
-                                "pattern": "분류",
-                                "replacement": ""
-                            },
-                            {
-                                "type": "trim"
-                            }
-                        ]
-                    },
-                    "title": {
-                        "selector": ".da-article-link",
-                        "type": "string",
-                        "normalization": [
-                            {
-                                "type": "trim"
-                            }
-                        ]
-                    },
-                    "link": {
-                        "selector": ".da-article-link",
-                        "attribute": "href",
-                        "type": "string"
-                    },
-                    "id": {
-                        "selector": ".da-article-link",
-                        "attribute": "href",
-                        "type": "int",
-                        "normalization": [
-                            {
-                                "type": "regexReplace",
-                                "pattern": ".*\\/(\\d+).*",
-                                "replacement": "$1"
-                            }
-                        ]
-                    },
-                    "author": {
-                        "selector": ".sv_member",
-                        "type": "string",
-                        "normalization": [
-                            {
-                                "type": "trim"
-                            }
-                        ]
-                    },
-                    "date": {
-                        "selector": ".wr-date",
-                        "type": "string",
-                        "normalization": [
-                            {
-                                "type": "regexReplace",
-                                "pattern": "등록",
-                                "replacement": ""
-                            },
-                            {
-                                "type": "trim"
-                            }
-                        ]
-                    },
-                    "views": {
-                        "selector": ".wr-num.order-4",
-                        "type": "int",
-                        "normalization": [
-                            {
-                                "type": "regexReplace",
-                                "pattern": "조회",
-                                "replacement": ""
-                            },
-                            {
-                                "type": "trim"
-                            },
-                            {
-                                "type": "convertKNotation"
-                            }
-                        ]
-                    },
-                    "commentCount": {
-                        "selector": ".count-plus",
-                        "type": "int",
-                        "default": "0"
-                    },
-                    "likes": {
-                        "selector": ".rcmd-box",
-                        "type": "int",
-                        "default": "0"
-                    }
-                }
-            },
-            "nextPage": {
-                "repeatable": false,
-                "optional": true,
-                "selector": "li.page-next a.page-link",
-                "attribute": "href",
-                "type": "string"
-            },
-            "currentPage": {
-                "repeatable": false,
-                "optional": true,
-                "selector": "li.page-item.active",
-                "type": "int"
-            }
+        {
+            "name": "자유게시판",
+            "id": "free",
+            "uri": "/free",
+            "category": "커뮤",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "질문과 답변",
+            "id": "qa",
+            "uri": "/qa",
+            "category": "커뮤",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "갤러리",
+            "id": "gallery",
+            "uri": "/gallery",
+            "category": "커뮤",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "가입인사",
+            "id": "hello",
+            "uri": "/hello",
+            "category": "커뮤",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "나눔",
+            "id": "giving",
+            "uri": "/giving",
+            "category": "커뮤",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "중고장터",
+            "id": "trade",
+            "uri": "/trade",
+            "category": "커뮤",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "앙수호대",
+            "id": "ang_guard",
+            "uri": "/",
+            "category": "커뮤",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "새로운 소식",
+            "id": "new",
+            "uri": "/new",
+            "category": "정보",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "알뜰구매",
+            "id": "economy",
+            "uri": "/economy",
+            "category": "정보",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "강좌/팁",
+            "id": "lecture",
+            "uri": "/lecture",
+            "category": "정보",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "사용기",
+            "id": "tutorial",
+            "uri": "/tutorial",
+            "category": "정보",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "자료실",
+            "id": "pds",
+            "uri": "/pds",
+            "category": "정보",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "낙서/연습장",
+            "id": "laboratory",
+            "uri": "/laboratory",
+            "category": "정보",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "직접홍보",
+            "id": "promotion",
+            "uri": "/promotion",
+            "category": "정보",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "앙지도",
+            "id": "angmap",
+            "uri": "/angmap",
+            "category": "리뷰",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "앙티티",
+            "id": "angtt",
+            "uri": "/angtt",
+            "category": "리뷰",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "수익링크",
+            "id": "referral",
+            "uri": "/referral",
+            "category": "리뷰",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "셀프구입",
+            "id": "self",
+            "uri": "/self",
+            "category": "리뷰",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "공지사항",
+            "id": "notice",
+            "uri": "/notice",
+            "category": "운영",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "앙리포트",
+            "id": "report",
+            "uri": "/report",
+            "category": "운영",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "다모앙 통계부",
+            "id": "statistics",
+            "uri": "/bbs/tag.php?q=%EB%8B%A4%EB%AA%A8%EC%95%99%ED%86%B5%EA%B3%84%EB%B6%80",
+            "category": "운영",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "신고 누적 게시물",
+            "id": "truthroom",
+            "uri": "/truthroom",
+            "category": "운영",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "회원 이용제한 기록",
+            "id": "disciplinelog",
+            "uri": "/disciplinelog",
+            "category": "운영",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "소명게시판",
+            "id": "claim",
+            "uri": "/claim",
+            "category": "운영",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "소모임 신청",
+            "id": "newgroup",
+            "uri": "/newgroup",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "AI당",
+            "id": "ai",
+            "uri": "/ai",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "GIT당",
+            "id": "git",
+            "uri": "/git",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "LOL당",
+            "id": "lol",
+            "uri": "/lol",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "NBA",
+            "id": "nba",
+            "uri": "/nba",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "OTT당",
+            "id": "ott",
+            "uri": "/ott",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "VR당",
+            "id": "vr",
+            "uri": "/vr",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "Youtube당",
+            "id": "youtube",
+            "uri": "/youtube",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "가상화폐당",
+            "id": "cryptocurrency",
+            "uri": "/cryptocurrency",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "개발한당",
+            "id": "development",
+            "uri": "/development",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "게임한당",
+            "id": "game",
+            "uri": "/game",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "경로당",
+            "id": "seniorcenter",
+            "uri": "/seniorcenter",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "골프당",
+            "id": "golf",
+            "uri": "/golf",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "공부한당",
+            "id": "study",
+            "uri": "/study",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "굴러간당",
+            "id": "car",
+            "uri": "/car",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "그림그린당",
+            "id": "drawing",
+            "uri": "/drawing",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "글쓴당",
+            "id": "writing",
+            "uri": "/writing",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "나스당",
+            "id": "nas",
+            "uri": "/nas",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "낚시당",
+            "id": "fishing",
+            "uri": "/fishing",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "날아간당",
+            "id": "fly",
+            "uri": "/fly",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "냐옹이당",
+            "id": "cat",
+            "uri": "/cat",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "노젓는당",
+            "id": "paddle",
+            "uri": "/paddle",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "녹음한당",
+            "id": "recording",
+            "uri": "/recording",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "다바앙",
+            "id": "coffee",
+            "uri": "/coffee",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "달린당",
+            "id": "running",
+            "uri": "/running",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "대구당",
+            "id": "daegu",
+            "uri": "/daegu",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "동숲한당",
+            "id": "dongsup",
+            "uri": "/dongsup",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "드론당",
+            "id": "drone",
+            "uri": "/drone",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "듣는당",
+            "id": "listening",
+            "uri": "/listening",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "등산한당",
+            "id": "hike",
+            "uri": "/hike",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "디아블로당",
+            "id": "diablo",
+            "uri": "/diablo",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "땀흘린당",
+            "id": "gym",
+            "uri": "/gym",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "레고당",
+            "id": "lego",
+            "uri": "/lego",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "리눅서당",
+            "id": "linux",
+            "uri": "/linux",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "만화본당",
+            "id": "comic",
+            "uri": "/comic",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "맥모앙",
+            "id": "macmoang",
+            "uri": "/macmoang",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "밀리터리당",
+            "id": "military",
+            "uri": "/military",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "바다건너당",
+            "id": "overseas",
+            "uri": "/overseas",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "방탄소년당",
+            "id": "bts",
+            "uri": "/bts",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "보드게임당",
+            "id": "boardgame",
+            "uri": "/boardgame",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "보러간당",
+            "id": "see",
+            "uri": "/see",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "봉사앙",
+            "id": "volunteer",
+            "uri": "/volunteer",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "비어있당",
+            "id": "beer",
+            "uri": "/beer",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "빵친당",
+            "id": "bread",
+            "uri": "/bread",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "사장한당",
+            "id": "business",
+            "uri": "/business",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "서버당",
+            "id": "server",
+            "uri": "/server",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "서피스당",
+            "id": "MSSurface",
+            "uri": "/MSSurface",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "소셜게임한당",
+            "id": "socialgame",
+            "uri": "/socialgame",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "시계당",
+            "id": "watches",
+            "uri": "/watches",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "악기당",
+            "id": "instrument",
+            "uri": "/instrument",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "안드로메당",
+            "id": "android",
+            "uri": "/android",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "애플모앙",
+            "id": "applemoang",
+            "uri": "/applemoang",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "야구당",
+            "id": "baseball",
+            "uri": "/baseball",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "여행한당",
+            "id": "travel",
+            "uri": "/travel",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "영화본당",
+            "id": "movie",
+            "uri": "/movie",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "옵시디안당",
+            "id": "obsidang",
+            "uri": "/obsidang",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "와우한당",
+            "id": "wow",
+            "uri": "/wow",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "와인마신당",
+            "id": "wine",
+            "uri": "/wine",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "요리당",
+            "id": "cooking",
+            "uri": "/cooking",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "우주본당",
+            "id": "space",
+            "uri": "/space",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "위스키당",
+            "id": "whiskey",
+            "uri": "/whiskey",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "육아당",
+            "id": "parenting",
+            "uri": "/parenting",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "이륜차당",
+            "id": "mbike",
+            "uri": "/mbike",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "일본산당",
+            "id": "japanlive",
+            "uri": "/japanlive",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "자전거당",
+            "id": "bicycle",
+            "uri": "/bicycle",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "잠수한당",
+            "id": "scuba",
+            "uri": "/scuba",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "재봉한당",
+            "id": "sewing",
+            "uri": "/sewing",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "전자책이당",
+            "id": "ebook",
+            "uri": "/ebook",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "주식한당",
+            "id": "stock",
+            "uri": "/stock",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "지켜본당",
+            "id": "watchingyou",
+            "uri": "/watchingyou",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "집꾸민당",
+            "id": "interior",
+            "uri": "/interior",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "집짓는당",
+            "id": "homebuilding",
+            "uri": "/homebuilding",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "찰칵찍당",
+            "id": "photo",
+            "uri": "/photo",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "책읽는당",
+            "id": "readingbooks",
+            "uri": "/readingbooks",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "철도당",
+            "id": "train",
+            "uri": "/train",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "축구한당",
+            "id": "soccer",
+            "uri": "/soccer",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "칭차앙",
+            "id": "compliment",
+            "uri": "/compliment",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "캠핑간당",
+            "id": "camping",
+            "uri": "/camping",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "콘솔한당",
+            "id": "console",
+            "uri": "/console",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "키보드당",
+            "id": "keyboard",
+            "uri": "/keyboard",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "탁구당",
+            "id": "tabletennis",
+            "uri": "/tabletennis",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "패스오브엑자일당",
+            "id": "pathofexile",
+            "uri": "/pathofexile",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "포뮬러당",
+            "id": "formula",
+            "uri": "/formula",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "포토샵당",
+            "id": "photoshop",
+            "uri": "/photoshop",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "퐁당퐁당",
+            "id": "swim",
+            "uri": "/swim",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "푸르르당",
+            "id": "plant",
+            "uri": "/plant",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "플라스틱모델앙",
+            "id": "plasticmodel",
+            "uri": "/plasticmodel",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "플레이모빌당",
+            "id": "playmobil",
+            "uri": "/playmobil",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "필기도구당",
+            "id": "stationery",
+            "uri": "/stationery",
+            "category": "소모임",
+            "template": "defaultBoard"
+        },
+        {
+            "name": "하드웨어앙",
+            "id": "hardware",
+            "uri": "/hardware",
+            "category": "소모임",
+            "template": "defaultBoard"
+        }
+    ],
+    "rules": {
+        "default": {
         }
     }
 }
