@@ -1,5 +1,5 @@
 {
-    "version": 16,
+    "version": 21,
     "updateUrl": "https://vuu.blueat.me/rules/damoang.vuu",
     "site": {
         "name": "다모앙",
@@ -210,6 +210,392 @@
                     }
                 }
             }
+        },
+        "galleryBoard": {
+            "articles": {
+                "urlPattern": ".*\\/[a-zA-Z0-9]+(\\?.*)?$",
+                "repeatable": true,
+                "selector": "section#bo_list div.card",
+                "fields": {
+                    "title": {
+                        "selector": ".card-title a",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "link": {
+                        "selector": ".card-title a",
+                        "attribute": "href",
+                        "type": "string"
+                    },
+                    "id": {
+                        "selector": ".card-title a",
+                        "attribute": "href",
+                        "type": "int",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": ".*\\/(\\d+).*",
+                                "replacement": "$1"
+                            }
+                        ]
+                    },
+                    "author": {
+                        "selector": "span.sv_name",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "date": {
+                        "selector": "div.align-items-end div:nth-child(3)",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": "등록",
+                                "replacement": ""
+                            },
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "views": {
+                        "selector": "div.align-items-end div:nth-child(1)",
+                        "type": "int",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": "조회",
+                                "replacement": ""
+                            },
+                            {
+                                "type": "trim"
+                            },
+                            {
+                                "type": "convertKNotation"
+                            }
+                        ]
+                    },
+                    "commentCount": {
+                        "selector": ".count-plus",
+                        "type": "int",
+                        "default": "0"
+                    },
+                    "likes": {
+                        "selector": "div.align-items-end div:nth-child(2)",
+                        "type": "int",
+                        "default": "0",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": "추천",
+                                "replacement": ""
+                            },
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    }
+                }
+            },
+            "nextPage": {
+                "repeatable": false,
+                "optional": true,
+                "selector": "li.page-item.active + li.page-item",
+                "attribute": "href",
+                "type": "string"
+            },
+            "currentPage": {
+                "repeatable": false,
+                "optional": true,
+                "selector": "li.page-item.active",
+                "type": "int"
+            },
+            "content": {
+                "urlPattern": ".*\\/[a-zA-Z0-9]+\\/\\d+.*",
+                "repeatable": false,
+                "fields": {
+                    "title": {
+                        "selector": "#bo_v_title",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "author": {
+                        "selector": ".sv_member",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "date": {
+                        "selector": "#bo_v_info .line-top > div:last-child",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": "작성일",
+                                "replacement": ""
+                            },
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "body": {
+                        "selector": "#bo_v_img, div.na-videowrap, #bo_v_con .na-convert, #bo_v_data .text-truncate",
+                        "type": "html",
+                        "joinValues": true
+                    }
+                }
+            },
+            "comments": {
+                "repeatable": true,
+                "selector": "#bo_vc article",
+                "fields": {
+                    "author": {
+                        "selector": ".sv_member",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "date": {
+                        "selector": ".ms-auto",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": "작성일",
+                                "replacement": ""
+                            },
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "body": {
+                        "selector": ".na-convert",
+                        "type": "html"
+                    },
+                    "isReply": {
+                        "attribute": "style",
+                        "type": "boolean",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": ".*margin-left.*",
+                                "replacement": "true"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "angttBoard": {
+            "articles": {
+                "urlPattern": ".*\\/[a-zA-Z0-9]+(\\?.*)?$",
+                "repeatable": true,
+                "selector": "section#bo_list div.card",
+                "fields": {
+                    "title": {
+                        "selector": ".card-title a",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "link": {
+                        "selector": ".card-title a",
+                        "attribute": "href",
+                        "type": "string"
+                    },
+                    "id": {
+                        "selector": ".card-title a",
+                        "attribute": "href",
+                        "type": "int",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": ".*\\/(\\d+).*",
+                                "replacement": "$1"
+                            }
+                        ]
+                    },
+                    "author": {
+                        "selector": "span.sv_name",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "views": {
+                        "selector": "div.card-body div.gap-2.small:nth-child(2) div:nth-child(1)",
+                        "type": "int",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": "조회",
+                                "replacement": ""
+                            },
+                            {
+                                "type": "trim"
+                            },
+                            {
+                                "type": "convertKNotation"
+                            }
+                        ]
+                    },
+                    "commentCount": {
+                        "selector": ".count-plus",
+                        "type": "int",
+                        "default": "0"
+                    },
+                    "likes": {
+                        "selector": "div.card-body div.gap-2.small:nth-child(2) div:nth-child(2)",
+                        "type": "int",
+                        "default": "0",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": "추천",
+                                "replacement": ""
+                            },
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "stars": {
+                        "selector": "div.card-body div:nth-child(4) span:nth-child(2)",
+                        "type": "double",
+                        "default": "0.0",
+                        "normalization": [
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    }
+                }
+            },
+            "nextPage": {
+                "repeatable": false,
+                "optional": true,
+                "selector": "li.page-item.active + li.page-item",
+                "attribute": "href",
+                "type": "string"
+            },
+            "currentPage": {
+                "repeatable": false,
+                "optional": true,
+                "selector": "li.page-item.active",
+                "type": "int"
+            },
+            "content": {
+                "urlPattern": ".*\\/[a-zA-Z0-9]+\\/\\d+.*",
+                "repeatable": false,
+                "fields": {
+                    "title": {
+                        "selector": "#bo_v_title",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "author": {
+                        "selector": ".sv_member",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "date": {
+                        "selector": "#bo_v_info .line-top > div:last-child",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": "작성일",
+                                "replacement": ""
+                            },
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "body": {
+                        "selector": "#bo_v_img, div.na-videowrap, #bo_v_con .na-convert, #bo_v_data .text-truncate",
+                        "type": "html",
+                        "joinValues": true
+                    }
+                }
+            },
+            "comments": {
+                "repeatable": true,
+                "selector": "#bo_vc article",
+                "fields": {
+                    "author": {
+                        "selector": ".sv_member",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "date": {
+                        "selector": ".ms-auto",
+                        "type": "string",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": "작성일",
+                                "replacement": ""
+                            },
+                            {
+                                "type": "trim"
+                            }
+                        ]
+                    },
+                    "body": {
+                        "selector": ".na-convert",
+                        "type": "html"
+                    },
+                    "isReply": {
+                        "attribute": "style",
+                        "type": "boolean",
+                        "normalization": [
+                            {
+                                "type": "regexReplace",
+                                "pattern": ".*margin-left.*",
+                                "replacement": "true"
+                            }
+                        ]
+                    }
+                }
+            }
         }
     },
     "boards": [
@@ -239,7 +625,7 @@
             "id": "gallery",
             "uri": "/gallery",
             "category": "커뮤",
-            "template": "defaultBoard"
+            "template": "galleryBoard"
         },
         {
             "name": "가입인사",
@@ -330,7 +716,7 @@
             "id": "angtt",
             "uri": "/angtt",
             "category": "리뷰",
-            "template": "defaultBoard"
+            "template": "angttBoard"
         },
         {
             "name": "수익링크",
