@@ -1,5 +1,5 @@
 {
-    "version": 21,
+    "version": 23,
     "updateUrl": "https://vuu.blueat.me/rules/damoang.vuu",
     "site": {
         "name": "다모앙",
@@ -7,10 +7,48 @@
         "description": "다모앙(https://damoang.net) 공식 룰 파일입니다.",
         "pageParam": "page"
     },
+    "search": {
+        "parameters": [
+            {
+                "name": "sfl",
+                "type": "select",
+                "label": "검색 조건",
+                "options": [
+                    {"label": "제목", "value": "wr_subject"},
+                    {"label": "내용", "value": "wr_content"},
+                    {"label": "제목+내용", "value": "wr_subject||wr_content"},
+                    {"label": "회원아이디", "value": "mb_id,1"},
+                    {"label": "회원아이디(코)", "value": "mb_id,0"},
+                    {"label": "글쓴이", "value": "wr_name,1"},
+                    {"label": "글쓴이(코)", "value": "wr_name,0"}
+                ],
+                "default": "wr_subject||wr_content"
+            },
+            {
+                "name": "sop",
+                "type": "hidden",
+                "value": "and"
+            },
+            {
+                "name": "stx",
+                "type": "text",
+                "label": "검색어",
+                "placeholder": "검색어를 입력하세요"
+            }
+        ],
+        "condition": {
+            "variable": "isLogin",
+            "value": true
+        }
+    },
     "variables": {
         "articleLink": ".da-article-link",
         "author": ".sv_member",
-        "date": ".wr-date"
+        "date": ".wr-date",
+        "isLogin": {
+            "selector": "[data-testid='button-logout']",
+            "type": "exist"
+        }
     },
     "templates": {
         "defaultBoard": {
