@@ -3,7 +3,7 @@ name: Notify Rules Update
 on:
   push:
     paths:
-      - 'rules/index.json'
+      - 'rules/*.vuu'
     branches:
       - main
   workflow_dispatch:
@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -29,55 +31,79 @@ jobs:
 
       - name: Send FCM Notification
         env:
-          # Google Service Account JSON content stored in GitHub Secrets
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          # The Firebase Project ID
           FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
         run: |
           import os
           import json
           import requests
+          import subprocess
           import google.auth
           from google.auth.transport.requests import Request
           from google.oauth2 import service_account
 
-          # Load Service Account
-          sa_info = json.loads(os.environ['FIREBASE_SERVICE_ACCOUNT'])
-          credentials = service_account.Credentials.from_service_account_info(sa_info)
-          scoped_credentials = credentials.with_scopes(['https://www.googleapis.com/auth/firebase.messaging'])
+          def get_changed_files():
+              try:
+                  # Get list of changed files in the last commit
+                  cmd = ['git', 'diff', '--name-only', 'HEAD~1', 'HEAD']
+                  output = subprocess.check_output(cmd).decode('utf-8')
+                  return output.splitlines()
+              except Exception as e:
+                  print(f"Error getting changed files: {e}")
+                  return []
 
-          # Get Access Token
-          scoped_credentials.refresh(Request())
-          access_token = scoped_credentials.token
+          def send_fcm_message(topic, title, body):
+              sa_info = json.loads(os.environ['FIREBASE_SERVICE_ACCOUNT'])
+              credentials = service_account.Credentials.from_service_account_info(sa_info)
+              scoped_credentials = credentials.with_scopes(['https://www.googleapis.com/auth/firebase.messaging'])
+              scoped_credentials.refresh(Request())
+              access_token = scoped_credentials.token
 
-          project_id = os.environ['FIREBASE_PROJECT_ID']
-          url = f'https://fcm.googleapis.com/v1/projects/{project_id}/messages:send'
+              project_id = os.environ['FIREBASE_PROJECT_ID']
+              url = f'https://fcm.googleapis.com/v1/projects/{project_id}/messages:send'
 
-          headers = {
-              'Authorization': f'Bearer {access_token}',
-              'Content-Type': 'application/json'
-          }
+              headers = {
+                  'Authorization': f'Bearer {access_token}',
+                  'Content-Type': 'application/json'
+              }
 
-          payload = {
-              "message": {
-                  "topic": "rules_update",
-                  "notification": {
-                      "title": "규칙 업데이트",
-                      "body": "새로운 필터링 규칙이 업데이트되었습니다."
-                  },
-                  "data": {
-                      "type": "rule_update",
-                      "description": "Rules updated in rules/index.json"
+              payload = {
+                  "message": {
+                      "topic": topic,
+                      "notification": {
+                          "title": title,
+                          "body": body
+                      },
+                      "data": {
+                          "type": "rule_update",
+                          "description": f"Rule updated: {topic}"
+                      }
                   }
               }
-          }
 
-          print(f"Sending notification to {url}...")
-          response = requests.post(url, headers=headers, json=payload)
-          
-          print(f"Status Code: {response.status_code}")
-          print(f"Response: {response.text}")
-          
-          if response.status_code != 200:
-              exit(1)
+              print(f"Sending notification to {topic}...")
+              response = requests.post(url, headers=headers, json=payload)
+              print(f"Status Code: {response.status_code}")
+              print(f"Response: {response.text}")
+
+          changed_files = get_changed_files()
+          print(f"Changed files: {changed_files}")
+
+          for file_path in changed_files:
+              if file_path.startswith('rules/') and file_path.endswith('.vuu'):
+                  filename = os.path.basename(file_path)
+                  # Remove extension for cleaner topic name, or keep it?
+                  # Topic chars allowed: a-zA-Z0-9-_.~%
+                  # dot is allowed. Let's use 'rule_' + filename (e.g., rule_damoang.vuu) to be specific.
+                  # Sanitize filename just in case
+                  safe_filename = filename.replace(' ', '_')
+                  topic = f"rule_{safe_filename}"
+                  
+                  # Extract site name if possible (optional, for now just use filename)
+                  site_name = filename.replace('.vuu', '')
+                  
+                  title = f"{site_name} 업데이트"
+                  body = f"{site_name} 규칙이 업데이트되었습니다."
+                  
+                  send_fcm_message(topic, title, body)
         shell: python
