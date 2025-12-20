@@ -1,0 +1,83 @@
+name: Notify Rules Update
+
+on:
+  push:
+    paths:
+      - 'rules/index.json'
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install google-auth requests
+
+      - name: Send FCM Notification
+        env:
+          # Google Service Account JSON content stored in GitHub Secrets
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          # The Firebase Project ID
+          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+        run: |
+          import os
+          import json
+          import requests
+          import google.auth
+          from google.auth.transport.requests import Request
+          from google.oauth2 import service_account
+
+          # Load Service Account
+          sa_info = json.loads(os.environ['FIREBASE_SERVICE_ACCOUNT'])
+          credentials = service_account.Credentials.from_service_account_info(sa_info)
+          scoped_credentials = credentials.with_scopes(['https://www.googleapis.com/auth/firebase.messaging'])
+
+          # Get Access Token
+          scoped_credentials.refresh(Request())
+          access_token = scoped_credentials.token
+
+          project_id = os.environ['FIREBASE_PROJECT_ID']
+          url = f'https://fcm.googleapis.com/v1/projects/{project_id}/messages:send'
+
+          headers = {
+              'Authorization': f'Bearer {access_token}',
+              'Content-Type': 'application/json'
+          }
+
+          payload = {
+              "message": {
+                  "topic": "rules_update",
+                  "notification": {
+                      "title": "규칙 업데이트",
+                      "body": "새로운 필터링 규칙이 업데이트되었습니다."
+                  },
+                  "data": {
+                      "type": "rule_update",
+                      "description": "Rules updated in rules/index.json"
+                  }
+              }
+          }
+
+          print(f"Sending notification to {url}...")
+          response = requests.post(url, headers=headers, json=payload)
+          
+          print(f"Status Code: {response.status_code}")
+          print(f"Response: {response.text}")
+          
+          if response.status_code != 200:
+              exit(1)
+        shell: python
